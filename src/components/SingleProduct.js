@@ -12,23 +12,23 @@ export default function SingleProduct() {
   );
 
   return (
-    <div className=" bg-white rounded-lg shadow-md p-10">
+    <div className="bg-white rounded-lg shadow-md p-5 md:p-10">
       {product ? (
-        <div className="flex gap-10  px-20 py-10 bg-gray-200">
+        <div className="flex flex-col md:flex-row gap-5 md:p-10 bg-gray-200">
           <div>
             <img
-              className="object-cover group-hover:scale-110 duration-500 "
+              className="object-cover w-full group-hover:scale-110 duration-500"
               src={product.image}
               alt={product.title}
             />
           </div>
           <div>
-            <h2 className="uppercase font-bold text-3xl py-2 text-gray-800">
+            <h2 className="uppercase font-bold text-xl md:text-3xl py-2 text-gray-800">
               {product.title}
             </h2>
-            <p className="mb-5 text-gray-600 ">{product.description}</p>
+            <p className="mb-3 text-gray-600">{product.description}</p>
 
-            <div className="flex mb-5">
+            <div className="flex mb-3">
               <div className="flex">
                 <MdOutlineStar />
                 <MdOutlineStar />
@@ -41,27 +41,27 @@ export default function SingleProduct() {
               </div>
             </div>
 
-            <p className="mb-5">Category : {product.category}</p>
-            <div className="flex gap-3 mb-5">
-              <p>Price :</p>
+            <p className="mb-3">Category: {product.category}</p>
+            <div className="flex gap-3 mb-3">
+              <p>Price:</p>
               <p className="line-through text-gray-500">${product.oldPrice}</p>
-              <p className="text-2xl text-red-600">${product.price}</p>
+              <p className="text-xl text-red-600">${product.price}</p>
             </div>
 
-            <div className="w-44 p-1 border border-gray-500 flex gap-4 mb-20">
-              <p className="text-sm mr-5">Quantity</p>
-              <div className="flex items-center gap-4 text-sm font-semibold">
-                <button className="border border-gray-500  h-5 w-5 hover:bg-gray-400 hover:text-white cursor-pointer duration-300 active:bg-black">
+            <div className="w-32 md:w-44 p-1 border border-gray-500 flex gap-2 mb-8">
+              <p className="text-xs md:text-sm mr-3">Quantity</p>
+              <div className="flex items-center gap-2 text-xs md:text-sm font-semibold">
+                <button className="border border-gray-500 h-5 w-5 hover:bg-gray-400 hover:text-white cursor-pointer duration-300 active:bg-black">
                   -
                 </button>
                 <span>|</span>
-                <button className="border border-gray-500  h-5 w-5 hover:bg-gray-400 hover:text-white cursor-pointer duration-300 active:bg-black">
+                <button className="border border-gray-500 h-5 w-5 hover:bg-gray-400 hover:text-white cursor-pointer duration-300 active:bg-black">
                   +
                 </button>
               </div>
             </div>
-            <div className="flex gap-4">
-            <button className="rounded w-full bg-green-800 text-white py-3 px-6 active:bg-gray-800 duration-500">
+            <div className="flex flex-col md:flex-row gap-3">
+              <button className="rounded w-full bg-green-800 text-white py-3 px-6 active:bg-gray-800 duration-500">
                 Buy Now
               </button>
               <button className="rounded w-full bg-orange-700 text-white py-3 px-6 active:bg-gray-800 duration-500">
