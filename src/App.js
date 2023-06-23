@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import { productsData } from "./api/Api";
+import SingleProduct from "./components/SingleProduct";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} loader={productsData} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/singleproduct/:id" element={<SingleProduct/>} />
       </Routes>
     </Router>
     <Footer/>
